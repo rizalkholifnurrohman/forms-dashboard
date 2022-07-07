@@ -151,3 +151,20 @@
     }
   }
 }
+
+@mixin custom-nav-scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px $fd_bs_black--sc;
+    border-radius: 12px;
+    background: $fd_bg_grey;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: $fd_pr_green;
+  }
+}
