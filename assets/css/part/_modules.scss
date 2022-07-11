@@ -12,10 +12,16 @@
 }
 
 .content__column{
-  padding: 0 8px;
+  padding-left: 0;
+  padding-right: 8px;
   width: 50%;
   max-width: 50%;
   margin-bottom: 1rem;
+
+  &+ .content__column{
+    padding-left: 8px;
+    padding-right: 0;
+  }
 }
 
 .card__box{
@@ -222,6 +228,7 @@
     font-size: 14px;
     border-top: none;
     border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
   }
 
   .client__name{
@@ -232,6 +239,16 @@
     display: block;
     font-size: 10px;
     color: $fd_bs_black--sc;
+  }
+
+  .bank{
+    img{
+      max-width: 60px;
+      max-height: 36px;
+      object-fit: cover;
+      margin-right: .5rem;
+      border-radius: 4px;
+    }
   }
 }
 
@@ -246,7 +263,9 @@
   align-items: center;
 
   input[type="checkbox"]{
-    margin-right: 1rem;
+    &.custom-checkbox{
+      margin-right: 1rem;
+    }
   }
 }
 
@@ -306,5 +325,29 @@
 
   @include viewport(desktop-down) {
     max-width: 200px;
+  }
+}
+
+.actions__box{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+
+  .left__box{
+    display: flex;
+    align-items: center;
+
+     > *{
+      margin-right: 8px;
+     }
+  }
+
+  .right__box{
+    display: flex;
+    align-items: center;
+
+     > *{
+      margin-right: 4px;
+     }
   }
 }

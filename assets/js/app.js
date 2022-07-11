@@ -30,5 +30,15 @@
         sidebar.addClass('sidebar--collapsed');
       }
     })
+
+    /* Dashboard */
+
+    $('.cd-menu').on('click', 'li', (e) => {
+      e.preventDefault();
+
+      $('#change-alert').modal('show');
+      $('.custom-dropdown input[type="checkbox"]').prop('checked', false);
+    });
+
   });
 }(window, jQuery));

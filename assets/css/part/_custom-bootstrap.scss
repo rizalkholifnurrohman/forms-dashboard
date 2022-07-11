@@ -1,0 +1,93 @@
+.btn{
+  min-width: 100px;
+}
+
+.modal-sweet-alert{
+
+  .modal-content{
+    border-radius: 8px;
+  }
+
+  .modal-body{
+    text-align: center;
+    padding: 3rem 1rem 4rem;
+    
+    .alert-icon{
+      font-size: 100px;
+      font-weight: $FW_BOLD;
+    }
+
+    h1{
+      font-weight: $FW_SEMI_BOLD;
+      padding-bottom: 2rem;
+    }
+
+    p{
+      color: $fd_bs_black--sc;
+      letter-spacing: 0.02em;
+    }
+
+    .btn{
+      + .btn{
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &.modal-sweet-alert--error{
+    .modal-body{
+      
+      .alert-icon{
+        color: $fd_st_error;
+      }
+    }
+  }
+
+  &.modal-sweet-alert--success{
+    .modal-body{
+      
+      .alert-icon{
+        color: $fd_st_success;
+      }
+    }
+  }
+
+  &.modal-sweet-alert--warning{
+    .modal-body{
+      
+      .alert-icon{
+        color: $fd_st_warning;
+      }
+    }
+  }
+}
+
+.modal-form{
+
+  .modal-content{
+    border-radius: 8px;
+  }
+
+}
+
+.btn-danger{
+  color: #fff;
+  background-color: $fd_st_error;
+  border-color: $fd_st_error;
+}
+
+.btn-warning{
+  color: #fff;
+  background-color: $fd_st_warning;
+  border-color: $fd_st_warning;
+}
+
+.btn-outline-secondary{
+  color: $fd_sta_inactive;
+  border-color: $fd_sta_inactive;
+}
+
+.btn-outline-danger{
+  color: $fd_st_error;
+  border-color: $fd_st_error;
+}
