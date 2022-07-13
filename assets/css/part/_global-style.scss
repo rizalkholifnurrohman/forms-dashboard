@@ -1088,6 +1088,46 @@ input[type="checkbox"]{
 
 // Breadcrumbs
 
+.breadcrumb__box{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  list-style: none;
+  border-radius: 0.25rem;
+  align-items: center;
+
+  .breadcrumb__category{
+    color: $fd_bs_black--sc;
+    font-weight: $FW_SEMI_BOLD;
+
+    + .breadcrumb__item{
+      color: $fd_bs_black--sc;
+      padding-left: 1rem;
+
+      &::before {
+        display: inline-block;
+        padding-right: 1rem;
+        color: $fd_bs_black--sc;
+        content: "|";
+      }
+    }
+  }
+
+  .breadcrumb__page{
+
+    + .breadcrumb__element{
+      padding-left: .1rem;
+
+      &::before {
+        display: inline-block;
+        padding-right: .4rem;
+        color: $fd_bs_black--sc;
+        content: "/";
+      }
+    }
+  }
+}
 
 /* Search form */
 

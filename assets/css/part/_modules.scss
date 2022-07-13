@@ -231,11 +231,11 @@
     vertical-align: middle;
   }
 
-  .client__name{
+  .client__name, .main-item{
     display: block;
   }
 
-  .client__handled{
+  .client__handled, .sub-item{
     display: block;
     font-size: 10px;
     color: $fd_bs_black--sc;
@@ -261,6 +261,14 @@
 
     &.descending{
       @include transform(rotate(180deg));
+    }
+  }
+
+  .custom__select {
+    max-height: 30px;
+
+    select{
+      padding: 4px 12px 4px 4px;
     }
   }
 }

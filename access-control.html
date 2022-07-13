@@ -5,7 +5,7 @@
   <!-- Basic -->
   <meta charset="utf-8">
 
-  <title>FORMS Dashboard | Payment Method</title>
+  <title>FORMS Dashboard | Access Control</title>
   <meta name="keywords" content="FORMS Dashboard" />
   <meta name="description" content="FORMS Dashboard - Responsive HTML5 Template">
   <meta name="author" content="FORMS">
@@ -148,13 +148,13 @@
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/voucher.html">
+            <a class="nav__link" href="#">
               <i class="bi bi-ticket-perforated"></i>
               <span>Voucher</span>
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link active" href="#">
+            <a class="nav__link" href="/payment-method.html">
               <i class="bi bi-credit-card"></i>
               <span>Payment Method</span>
             </a>
@@ -170,7 +170,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">
+            <a class="nav__link active" href="#">
               <i class="bi bi-shield-lock"></i>
               <span>Access Control</span>
             </a>
@@ -223,23 +223,22 @@
 
         <div class="content__row">
           <ol class="breadcrumb__box">
-            <li class="breadcrumb__category">Transactions</li>
+            <li class="breadcrumb__category">Others</li>
             <li class="breadcrumb__item">
-              <span class="breadcrumb__page">Payment Method</span>
+              <span class="breadcrumb__page">Access Cotrol</span>
               <span class="breadcrumb__element">List</span>
             </li>
           </ol>
         </div>
-
         <div class="content__row">
           <div class="card__box">
             <div class="card__header">
               <div class="card__title">
-                <i class="bi bi-credit-card"></i>
-                <span>Payment Method</span>
+                <i class="bi bi-shield-lock"></i>
+                <span>Access Control</span>
               </div>
-              <div class="payment__actions">
-                <a href="#" class="btn-fd-primary btn--small" data-toggle="modal" data-target="#add-new-payment">Add New Method <i class="bi bi-plus-lg"></i></a>
+              <div class="access-control__actions">
+                <a href="#" class="btn-fd-primary btn--small" data-toggle="modal" data-target="#add-new-access">Add New Access <i class="bi bi-plus-lg"></i></a>
               </div>
             </div>
             <div class="actions__box">
@@ -247,9 +246,10 @@
                 <span>Sorting By:</span> 
                 <div class="custom__select custom__select--outline">
                   <select name="sort" id="sort">
-                    <option value="bank-name">Bank Name</option>
-                    <option value="customer-name">Customer Name</option>
-                    <option value="transfer-type">Transfer Type</option>
+                    <option>Team</option>
+                    <option selected>Name</option>
+                    <option>Project</option>
+                    <option>Access Expired</option>
                   </select>
                   <span class="custom-arrow"></span>
                 </div>
@@ -267,130 +267,69 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Activation</th>
+                    <th scope="col">Team</th>
                     <th scope="col">
-                      Bank                       
+                      Name
                       <span class="sort__icon ascending active">
                         <i class="bi bi-sort-down"></i>
                       </span>
-                  </th>
-                    <th scope="col">Customer Name</th>
-                    <th scope="col">Transfer Type</th>
-                    <th scope="col">Code Bank</th>
-                    <th scope="col">Account Number</th>
+                    </th>
+                    <th scope="col">Project</th>
+                    <th scope="col">Access Expired</th>
+                    <th scope="col">Role</th>
                     <th scope="col">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <td>Developer</td>
                     <td>
-                      <label class="toggle-switch" data-toggle="modal" data-target="#error-enable-alert">
-                        <input type="checkbox" checked/>
-                        <span class="slider"></span>
-                      </label>
+                      <span class="main-item">Bambang</span>
+                      <span class="sub-item">#11222</span>
                     </td>
+                    <td>1</td>
+                    <td>20/12/2023</td>
                     <td>
-                      <div class="bank">
-                        <img src="assets/images/content/bca.png" alt="bank-logo">
-                        <span>Bank BCA</span>
+                      <div class="custom__select custom__select--outline">
+                        <select>
+                          <option>Administrator</option>
+                        </select>
+                        <span class="custom-arrow"></span>
                       </div>
                     </td>
-                    <td>
-                      Angga Sukma
-                    </td>
-                    <td>Virtual Account</td>
-                    <td>8221</td>
-                    <td>1122 1221 22211 421</td>
                     <td>
                       <div class="d-flex flex-nowrap">
                         <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#delete-alert">
                           <i class="bi bi-trash"></i>
                         </a>
-                        <a href="#" class="btn-fd-icon-outline">
+                        <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#add-new-access">
                           <i class="bi bi-pencil-square"></i>
                         </a>
                       </div>
                     </td>
                   </tr>
                   <tr>
+                    <td>Designer</td>
                     <td>
-                      <label class="toggle-switch" data-toggle="modal" data-target="#error-enable-alert">
-                        <input type="checkbox" checked/>
-                        <span class="slider"></span>
-                      </label>
+                      <span class="main-item">Eko</span>
+                      <span class="sub-item">#1113</span>
                     </td>
+                    <td>2</td>
+                    <td>01/12/2023</td>
                     <td>
-                      <div class="bank">
-                        <img src="assets/images/content/mandiri.png" alt="bank-logo">
-                        <span>Bank Mandiri</span>
+                      <div class="custom__select custom__select--outline">
+                        <select>
+                          <option>Staff</option>
+                        </select>
+                        <span class="custom-arrow"></span>
                       </div>
                     </td>
-                    <td>Angga Sukma</td>
-                    <td>Transfer</td>
-                    <td>-</td>
-                    <td>3332 3322 3221 421</td>
                     <td>
                       <div class="d-flex flex-nowrap">
                         <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#delete-alert">
                           <i class="bi bi-trash"></i>
                         </a>
-                        <a href="#" class="btn-fd-icon-outline">
-                          <i class="bi bi-pencil-square"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="toggle-switch" data-toggle="modal" data-target="#error-enable-alert">
-                        <input type="checkbox" checked/>
-                        <span class="slider"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <div class="bank">
-                        <img src="assets/images/content/ovo.png" alt="bank-logo">
-                        <span>OVO</span>
-                      </div>
-                    </td>
-                    <td>Angga Sukma</td>
-                    <td>Transfer</td>
-                    <td>-</td>
-                    <td>08212345678910</td>
-                    <td>
-                      <div class="d-flex flex-nowrap">
-                        <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#delete-alert">
-                          <i class="bi bi-trash"></i>
-                        </a>
-                        <a href="#" class="btn-fd-icon-outline">
-                          <i class="bi bi-pencil-square"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="toggle-switch" data-toggle="modal" data-target="#error-enable-alert">
-                        <input type="checkbox"/>
-                        <span class="slider"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <div class="bank">
-                        <img src="assets/images/content/dana.png" alt="bank-logo">
-                        <span>DANA</span>
-                      </div>
-                    </td>
-                    <td>Angga Sukma</td>
-                    <td>Transfer</td>
-                    <td>-</td>
-                    <td>08212345678910</td>
-                    <td>
-                      <div class="d-flex flex-nowrap">
-                        <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#delete-alert">
-                          <i class="bi bi-trash"></i>
-                        </a>
-                        <a href="#" class="btn-fd-icon-outline">
+                        <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#add-new-access">
                           <i class="bi bi-pencil-square"></i>
                         </a>
                       </div>
@@ -439,7 +378,7 @@
               <i class="bi bi-trash"></i>
             </div>
             <h1>Delete Data?</h1>
-            <p>Do you really want to delete this payment system?</p>
+            <p>Do you really want to delete this access control?</p>
             <a href="#" class="btn btn-outline-danger" data-dismiss="modal">Cancel</a>
             <a href="#" class="btn btn-danger" data-dismiss="modal">Delete</a>
           </div>
@@ -447,22 +386,6 @@
       </div>
     </div>
 
-    <!-- Modal enable switch -->
-    <div class="modal modal-sweet-alert modal-sweet-alert--error fade" id="error-enable-alert" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="error-enable-alertLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="alert-icon">
-              <i class="bi bi-x-circle"></i>
-            </div>
-            <h1>Oops!</h1>
-            <p>You mush have admin access to enable this feature</p>
-            <a href="#" class="btn btn-danger" data-dismiss="modal">OK</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
     <!-- Modal succes alert-->
     <div class="modal modal-sweet-alert modal-sweet-alert--success fade" id="success-alert" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="success-alertLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -472,7 +395,7 @@
               <i class="bi bi-check-circle"></i>
             </div>
             <h1>Done!</h1>
-            <p>New payment method was added</p>
+            <p>New access control was added</p>
             <a href="#" class="btn btn-fd-primary" data-dismiss="modal">OK</a>
           </div>
         </div>
@@ -480,11 +403,11 @@
     </div>
 
     <!-- Modal form-->
-    <div class="modal modal-form fade" id="add-new-payment" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="add-new-paymentLabel" aria-hidden="true">
+    <div class="modal modal-form fade" id="add-new-access" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="add-new-accessLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Add New Payment</h5>
+            <h5 class="modal-title">Add New - Access Control</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true"><i class="bi bi-x-lg"></i></span>
             </button>
@@ -492,61 +415,49 @@
           <div class="modal-body">
             <form>
               <div class="form-group row">
-                <label for="file-input" class="col-sm-4 col-form-label align-self-center">
-                  Bank logo
+                <label for="team" class="col-sm-4 col-form-label align-self-center">
+                  Team
                   <span class="required">Required</span>
                 </label>
                 <div class="col-sm-8">
-                  <label class="custom-input-file">
-                    <i class="bi bi-image"></i>
-                    <span class="title">Upload</span>
-                    <input class="file-upload" id="file-input" name="" type="file" required/>
-                </label>
+                  <select id="team" class="form-control" required>
+                    <option selected>Developer</option>
+                    <option>Designer</option>
+                    <option>Sales</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group row">
-                <label for="bank-name" class="col-sm-4 col-form-label align-self-center">
-                  Bank
+                <label for="name" class="col-sm-4 col-form-label align-self-center">
+                  Name
                   <span class="required">Required</span>
                 </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="bank-name" placeholder="Bank Name" required>
+                  <input type="text" class="form-control" id="name" placeholder="Name" required>
                 </div>
               </div>
               <div class="form-group row">
-                <label for="customer-name" class="col-sm-4 col-form-label align-self-center">
-                  Customer Name
+                <label for="access-expired" class="col-sm-4 col-form-label align-self-center">
+                  Access Expired
                   <span class="required">Required</span>
                 </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="customer-name" placeholder="Customer Name" required>
+                  <div class="input-group date">
+                    <input type="text" class="form-control" id="access-expired" required><span class="input-group-addon"><i class="bi bi-calendar4"></i></span>
+                  </div>
                 </div>
               </div>
               <div class="form-group row">
-                <label for="transfer-type" class="col-sm-4 col-form-label align-self-center">
-                  Transfer Type
+                <label for="role" class="col-sm-4 col-form-label align-self-center">
+                  Role
                   <span class="required">Required</span>
                 </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="transfer-type" placeholder="Transfer Type" required>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="code-bank" class="col-sm-4 col-form-label align-self-center">
-                  Code Bank
-                  <span class="required">Required</span>
-                </label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control" id="code-bank" placeholder="Code Bank" required>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="account-number" class="col-sm-4 col-form-label align-self-center">
-                  Account Number
-                  <span class="required">Required</span>
-                </label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control" id="account-number" placeholder="Account Number" required>
+                  <select id="role" class="form-control" required>
+                    <option selected>Administrator</option>
+                    <option>Staff</option>
+                    <option>No Access</option>
+                  </select>
                 </div>
               </div>
               <div class="row pt-4">
@@ -567,7 +478,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-
   <!-- Custom JS -->
   <script src="assets/js/app.js"></script>
 
