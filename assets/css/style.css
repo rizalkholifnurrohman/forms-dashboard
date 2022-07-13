@@ -23,10 +23,6 @@ li {
   list-style: none;
 }
 
-.row {
-  margin: 0;
-}
-
 .content__wrapper {
   width: 100%;
   padding-top: 6rem;
@@ -310,6 +306,23 @@ li {
      object-fit: cover;
   margin-right: .5rem;
   border-radius: 4px;
+}
+
+.table .sort__icon {
+  margin-left: .3rem;
+  display: none;
+}
+
+.table .sort__icon.active {
+  display: inline-block;
+}
+
+.table .sort__icon.descending {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -webkit-transform: rotate(180deg);
+  /* Opera, Chrome, and Safari */
 }
 
 .pagination {
@@ -978,6 +991,7 @@ button.btn-fd-icon-outline:disabled {
 }
 
 .btn-fd-primary, .btn-fd-primary-white, .btn-fd-primary-grey, .btn-fd-outline {
+  display: inline-block;
   font-size: 14px;
   font-weight: 600;
   text-transform: capitalize;
@@ -1403,7 +1417,7 @@ input[type="checkbox"].custom-checkbox.custom-checkbox--all:checked::before {
 
 .custom__select {
   position: relative;
-  max-width: 150px;
+  max-width: 190px;
   max-height: 38px;
 }
 
@@ -1458,6 +1472,7 @@ input[type="checkbox"].custom-checkbox.custom-checkbox--all:checked::before {
 }
 
 .custom__select.custom__select--outline select {
+  min-width: 190px;
   background-color: #ffffff;
   color: #8ACCA1;
   border: 1px solid #8ACCA1;
@@ -1646,6 +1661,49 @@ input[type="checkbox"].custom-checkbox.custom-checkbox--all:checked::before {
   border: none;
 }
 
+/* Custom file input */
+.custom-input-file {
+  width: 100%;
+  border: 1px dashed #78828C;
+  border-radius: 8px;
+  display: block;
+  padding: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+
+.custom-input-file i, .custom-input-file .title {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #78828C;
+}
+
+.custom-input-file .title {
+  font-size: 1rem;
+}
+
+.custom-input-file:hover {
+  border: 1px solid #333333;
+}
+
+.custom-input-file:hover i, .custom-input-file:hover .title {
+  color: #333333;
+}
+
+.custom-input-file input {
+  display: none;
+}
+
+#FileInput {
+  display: none;
+}
+
 .btn {
   min-width: 100px;
 }
@@ -1672,6 +1730,8 @@ input[type="checkbox"].custom-checkbox.custom-checkbox--all:checked::before {
 .modal-sweet-alert .modal-body p {
   color: #78828C;
   letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
 }
 
 .modal-sweet-alert .modal-body .btn + .btn {
@@ -1692,6 +1752,52 @@ input[type="checkbox"].custom-checkbox.custom-checkbox--all:checked::before {
 
 .modal-form .modal-content {
   border-radius: 8px;
+}
+
+.modal-form .modal-header {
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.modal-form .modal-header .modal-title {
+  font-weight: 600;
+}
+
+.modal-form .modal-body {
+  padding: 2rem 2rem 3rem;
+}
+
+.modal-form form .col-form-label {
+  font-weight: 600;
+}
+
+.modal-form form .required {
+  font-weight: 500;
+  font-size: 10px;
+  background: #EAEAEA;
+  color: #78828C;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: .5rem;
+}
+
+.input-group.date input.form-control {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+.input-group.date .input-group-addon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.btn-danger, .btn-warning, .btn-outline-secondary, .btn-outline-danger {
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
 }
 
 .btn-danger {

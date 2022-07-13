@@ -480,6 +480,7 @@ button.btn-fd-icon-outline{
 }
 
 .btn-fd-primary, .btn-fd-primary-white, .btn-fd-primary-grey, .btn-fd-outline{
+  display: inline-block;
   font-size: 14px;
   font-weight: $FW_SEMI_BOLD;
   text-transform: capitalize;
@@ -910,7 +911,7 @@ input[type="checkbox"]{
 // Custom select 
 .custom__select {
   position: relative;
-  max-width: 150px;
+  max-width: 190px;
   max-height: 38px;
 
   select {
@@ -962,6 +963,7 @@ input[type="checkbox"]{
   &.custom__select--outline{
 
     select{
+      min-width: 190px;
       background-color: $fd_bs_white;
       color: $fd_pr_green;
       border: 1px solid $fd_pr_green;
@@ -1129,4 +1131,44 @@ input[type="checkbox"]{
   }
 }
 
+/* Custom file input */
+
+.custom-input-file {
+  width: 100%;
+  border: 1px dashed $fd_bs_black--sc;
+  border-radius: 8px;
+  display: block;
+  padding: 5px;
+  @include transition(all .30s ease);
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+
+  i, .title{
+    display: block;
+    font-size: 30px;
+    padding-bottom: 5px;
+    @include transition(all .30s ease);
+    color: $fd_bs_black--sc;
+  }
+
+  .title{
+    font-size: 1rem;
+  }
+
+  &:hover{
+    border: 1px solid $fd_bs_black;
+
+    i, .title{
+      color: $fd_bs_black;
+    }
+  }
+
+  input{
+    display: none;
+  }
+}
+#FileInput{
+  display:none;
+}
 

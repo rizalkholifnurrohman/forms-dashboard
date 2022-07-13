@@ -25,6 +25,8 @@
     p{
       color: $fd_bs_black--sc;
       letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+      font-weight: $FW_LIGHT;
     }
 
     .btn{
@@ -68,6 +70,54 @@
     border-radius: 8px;
   }
 
+  .modal-header{
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #dee2e6;
+
+    .modal-title{
+      font-weight: $FW_SEMI_BOLD;
+    }
+  }
+
+  .modal-body{
+    padding: 2rem 2rem 3rem;
+  }
+
+  form{
+    .col-form-label{
+      font-weight: $FW_SEMI_BOLD;
+    }
+
+    .required{
+      font-weight: $FW_MEDIUM;
+      font-size: 10px;
+      background: $fd_sta_secondary;
+      color: $fd_bs_black--sc;
+      padding: 2px 4px;
+      border-radius: 4px;
+      margin-left: .5rem;
+    }
+  }
+
+}
+
+.input-group.date{
+  input.form-control{
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+  }
+  .input-group-addon{
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translate(0, -50%);
+  }
+}
+
+.btn-danger, .btn-warning, .btn-outline-secondary, .btn-outline-danger{
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  font-weight: $FW_SEMI_BOLD;
 }
 
 .btn-danger{

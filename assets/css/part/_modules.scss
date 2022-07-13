@@ -250,6 +250,19 @@
       border-radius: 4px;
     }
   }
+
+  .sort__icon{
+    margin-left: .3rem;
+    display: none;
+
+    &.active{
+      display: inline-block;
+    }
+
+    &.descending{
+      @include transform(rotate(180deg));
+    }
+  }
 }
 
 .pagination{

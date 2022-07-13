@@ -40,5 +40,16 @@
       $('.custom-dropdown input[type="checkbox"]').prop('checked', false);
     });
 
+    /* Datepicker */
+    $('.input-group.date').datepicker({
+    });
+
+    /* File input*/
+    $('#file-input').on('change', (e) => {
+      let displayName = e.target.value.split("\\").pop().slice(0, 11);
+      let extension = e.target.value.split('.').pop();
+      $('.custom-input-file .title')[0].textContent = displayName+'...'+extension;
+    });
+
   });
 }(window, jQuery));
