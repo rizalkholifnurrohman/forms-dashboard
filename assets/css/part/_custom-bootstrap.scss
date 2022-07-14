@@ -92,8 +92,10 @@
   }
   .input-group-addon{
     position: absolute;
+    z-index: 4;
     top: 50%;
-    right: 1rem;
+    right: 0;
+    padding: .5rem 1rem .5rem;
     transform: translate(0, -50%);
   }
 }

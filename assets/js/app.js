@@ -41,7 +41,14 @@
     });
 
     /* Datepicker */
-    $('.input-group.date').datepicker({
+    $('#datetimepicker1').datetimepicker({
+      format: 'L'
+    });
+    $('#timepicker1').datetimepicker({
+      format: 'LT'
+    });
+    $('#timepicker2').datetimepicker({
+      format: 'LT'
     });
 
     /* File input*/
