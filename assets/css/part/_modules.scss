@@ -36,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 2rem;
+    align-items: center;
 
     .card__title{
       display: flex;
@@ -53,6 +54,34 @@
         margin-right: 1rem;
       }
     }
+
+    .card__actions{
+      &::before {
+        padding-right: 1.5rem;
+        color: $fd_bs_black--sc;
+        height: 100%;
+        width: 1px;
+        border-left: 1px solid $fd_bs_black;
+        content: "";
+      }
+    }
+
+    .nav-pills{
+      .nav-link.active, .show>.nav-link {
+        color: $fd_pr_green;
+        font-weight: $FW_BOLD;
+        background-color: $fd_bs_white;
+        border-bottom: 2px solid $fd_pr_green;
+      }
+
+      .nav-link{
+        color: $fd_bs_black--sc;
+
+        &:not(.active):hover{
+          color: $fd_pr_green-300;
+        }
+      }
+    } 
   }
 
   .card__body{
@@ -353,6 +382,7 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 1rem;
+  align-items: center;
 
   .left__box{
     display: flex;
@@ -386,5 +416,79 @@ form{
     padding: 2px 4px;
     border-radius: 4px;
     margin-left: .5rem;
+  }
+}
+
+.component__listing{
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  .component__item{
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 20%;
+    margin-bottom: 2rem;
+  }
+
+  .component__card{
+    height: 100%;
+    position: relative;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .card__image{
+    position: relative;
+    display: block;
+    padding: 0 0 71.428% 0;
+
+    img{
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      margin: auto;
+    }
+  }
+
+  .card__details{
+    padding: 1rem .75rem;
+  }
+
+  .price-box{
+    margin-bottom: 1rem;
+
+    .price{
+      font-size: 20px;
+      font-weight: $FW_BOLD;
+    }
+  }
+
+  .price-box, .button-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .badge{
+    font-weight: $FW_LIGHT;
+  }
+
+  @include viewport(desktop-down) {
+    .component__item{
+      display: block;
+      padding-left: 8px;
+      padding-right: 8px;
+      width: 25%;
+      margin-bottom: 2rem;
+    }
   }
 }

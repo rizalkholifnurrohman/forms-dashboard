@@ -730,6 +730,7 @@ button.btn-fd-arrow{
   padding: 4px 8px;
   background: $fd_st_neutral;
   color: $fd_bs_black;
+  line-height: 1.5;
 
   &.badge--primary{
     background: $fd_tr_primary;
@@ -759,6 +760,11 @@ button.btn-fd-arrow{
   &.badge--secondary{
     background: $fd_tr_secondary;
     color: $fd_sc_brown-400;
+  }
+
+  &.badge--black-secondary{
+    background: $fd_bs_black--sc;
+    color: $fd_bs_white;
   }
 }
 
@@ -948,7 +954,7 @@ input[type="checkbox"]{
 .custom__select {
   position: relative;
   max-width: 190px;
-  max-height: 38px;
+  max-height: 40px;
 
   select {
     width: 100%;
@@ -975,7 +981,7 @@ input[type="checkbox"]{
   span {
     position: absolute;
     width: 20px;
-    height: 100%;
+    height: calc(100% - 2px);
     background-color: $fd_pr_green;
     right: 0;
     top: 0;

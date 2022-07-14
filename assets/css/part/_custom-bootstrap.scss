@@ -104,6 +104,10 @@
   font-size: 14px;
   padding: 0.5rem 1rem;
   font-weight: $FW_SEMI_BOLD;
+
+  &.btn--small{
+    padding: .3rem 1rem;
+  }
 }
 
 .btn-danger{

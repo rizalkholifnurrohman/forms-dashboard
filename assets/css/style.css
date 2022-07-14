@@ -68,6 +68,9 @@ li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card__box .card__header .card__title {
@@ -89,6 +92,30 @@ li {
   font-weight: 700;
   color: #8ACCA1;
   margin-right: 1rem;
+}
+
+.card__box .card__header .card__actions::before {
+  padding-right: 1.5rem;
+  color: #78828C;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #333333;
+  content: "";
+}
+
+.card__box .card__header .nav-pills .nav-link.active, .card__box .card__header .nav-pills .show > .nav-link {
+  color: #8ACCA1;
+  font-weight: 700;
+  background-color: #ffffff;
+  border-bottom: 2px solid #8ACCA1;
+}
+
+.card__box .card__header .nav-pills .nav-link {
+  color: #78828C;
+}
+
+.card__box .card__header .nav-pills .nav-link:not(.active):hover {
+  color: #58B97D;
 }
 
 .card__box .card__body {
@@ -427,6 +454,9 @@ li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .actions__box .left__box {
@@ -467,6 +497,90 @@ form .required {
   padding: 2px 4px;
   border-radius: 4px;
   margin-left: .5rem;
+}
+
+.component__listing {
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.component__listing .component__item {
+  display: block;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 20%;
+  margin-bottom: 2rem;
+}
+
+.component__listing .component__card {
+  height: 100%;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.component__listing .card__image {
+  position: relative;
+  display: block;
+  padding: 0 0 71.428% 0;
+}
+
+.component__listing .card__image img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+}
+
+.component__listing .card__details {
+  padding: 1rem .75rem;
+}
+
+.component__listing .price-box {
+  margin-bottom: 1rem;
+}
+
+.component__listing .price-box .price {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.component__listing .price-box, .component__listing .button-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component__listing .badge {
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 1439px) and (min-width: 320px) {
+  .component__listing .component__item {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 25%;
+    margin-bottom: 2rem;
+  }
 }
 
 * {
@@ -1258,6 +1372,7 @@ button.btn-fd-arrow:disabled {
   padding: 4px 8px;
   background: #F0F0F0;
   color: #333333;
+  line-height: 1.5;
 }
 
 .badge.badge--primary {
@@ -1288,6 +1403,11 @@ button.btn-fd-arrow:disabled {
 .badge.badge--secondary {
   background: rgba(164, 115, 73, 0.2);
   color: #A47349;
+}
+
+.badge.badge--black-secondary {
+  background: #78828C;
+  color: #ffffff;
 }
 
 /* checkbox */
@@ -1474,7 +1594,7 @@ input[type="checkbox"].custom-checkbox.custom-checkbox--all:checked::before {
 .custom__select {
   position: relative;
   max-width: 190px;
-  max-height: 38px;
+  max-height: 40px;
 }
 
 .custom__select select {
@@ -1503,7 +1623,7 @@ input[type="checkbox"].custom-checkbox.custom-checkbox--all:checked::before {
 .custom__select span {
   position: absolute;
   width: 20px;
-  height: 100%;
+  height: calc(100% - 2px);
   background-color: #8ACCA1;
   right: 0;
   top: 0;
@@ -1885,6 +2005,10 @@ input[type="checkbox"].custom-checkbox.custom-checkbox--all:checked::before {
   font-size: 14px;
   padding: 0.5rem 1rem;
   font-weight: 600;
+}
+
+.btn-danger.btn--small, .btn-warning.btn--small, .btn-outline-secondary.btn--small, .btn-outline-danger.btn--small {
+  padding: .3rem 1rem;
 }
 
 .btn-danger {
