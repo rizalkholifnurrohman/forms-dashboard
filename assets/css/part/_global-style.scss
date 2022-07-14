@@ -479,7 +479,7 @@ button.btn-fd-icon-outline{
   }
 }
 
-.btn-fd-primary, .btn-fd-primary-white, .btn-fd-primary-grey, .btn-fd-outline{
+.btn-fd-primary, .btn-fd-primary-white, .btn-fd-primary-grey, .btn-fd-outline, .btn-fd-outline-secondary{
   display: inline-block;
   font-size: 14px;
   font-weight: $FW_SEMI_BOLD;
@@ -631,6 +631,42 @@ button.btn-fd-outline{
     color: $fd_bs_white;
     background: $fd_pr_green;
     border: 1px solid $fd_pr_green;
+  }
+
+  &.disabled {
+    color: $fd_sta_disabled;
+    background: $fd_bg_grey;
+    border: 1px solid $fd_bg_grey;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+button.btn-fd-outline-secondary{
+  &:not(disabled):hover, &:not(disabled).active, &:not(disabled):active{
+    color: $fd_bs_white;
+    background: $fd_bs_black--sc;
+    border: 1px solid $fd_bs_black--sc;
+  }
+
+  &:disabled{
+    color: $fd_sta_disabled;
+    background: $fd_bg_grey;
+    border: 1px solid $fd_bg_grey;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.btn-fd-outline-secondary{
+  background: $fd_bs_white;
+  color: $fd_bs_black--sc;
+  border: 1px solid $fd_bs_black--sc;
+
+  &:not(.disabled):hover, &:not(.disabled).active, &:not(.disabled):active{
+    color: $fd_bs_white;
+    background: $fd_bs_black--sc;
+    border: 1px solid $fd_bs_black--sc;
   }
 
   &.disabled {

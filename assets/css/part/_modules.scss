@@ -372,3 +372,19 @@
      }
   }
 }
+
+form{
+  .col-form-label{
+    font-weight: $FW_SEMI_BOLD;
+  }
+
+  .required{
+    font-weight: $FW_MEDIUM;
+    font-size: 10px;
+    background: $fd_bg_light-grey;
+    color: $fd_bs_black--sc;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-left: .5rem;
+  }
+}

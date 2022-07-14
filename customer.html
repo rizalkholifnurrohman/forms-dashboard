@@ -5,7 +5,7 @@
   <!-- Basic -->
   <meta charset="utf-8">
 
-  <title>FORMS Dashboard | Access Control</title>
+  <title>FORMS Dashboard | Customers</title>
   <meta name="keywords" content="FORMS Dashboard" />
   <meta name="description" content="FORMS Dashboard - Responsive HTML5 Template">
   <meta name="author" content="FORMS">
@@ -136,7 +136,7 @@
             <hr class="separate">
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/customer.html">
+            <a class="nav__link active" href="/customer.html">
               <i class="bi bi-person"></i>
               <span>Customer</span>
             </a>
@@ -148,7 +148,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">
+            <a class="nav__link" href="/voucher.html">
               <i class="bi bi-ticket-perforated"></i>
               <span>Voucher</span>
             </a>
@@ -164,13 +164,13 @@
             <hr class="separate">
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">
+            <a class="nav__link" href="/agents.html">
               <i class="bi bi-people"></i>
               <span>Agents</span>
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link active" href="#">
+            <a class="nav__link" href="/access-control.html">
               <i class="bi bi-shield-lock"></i>
               <span>Access Control</span>
             </a>
@@ -223,9 +223,9 @@
 
         <div class="content__row">
           <ol class="breadcrumb__box">
-            <li class="breadcrumb__category">Others</li>
+            <li class="breadcrumb__category">Transactions</li>
             <li class="breadcrumb__item">
-              <span class="breadcrumb__page">Access Cotrol</span>
+              <span class="breadcrumb__page">Customer</span>
               <span class="breadcrumb__element">List</span>
             </li>
           </ol>
@@ -235,10 +235,7 @@
             <div class="card__header">
               <div class="card__title">
                 <i class="bi bi-shield-lock"></i>
-                <span>Access Control</span>
-              </div>
-              <div class="access-control__actions">
-                <a href="#" class="btn-fd-primary btn--small" data-toggle="modal" data-target="#add-new-access">Add New Access <i class="bi bi-plus-lg"></i></a>
+                <span>Customer</span>
               </div>
             </div>
             <div class="actions__box">
@@ -246,13 +243,15 @@
                 <span>Sorting By:</span> 
                 <div class="custom__select custom__select--outline">
                   <select name="sort" id="sort">
-                    <option>Team</option>
                     <option selected>Name</option>
-                    <option>Project</option>
-                    <option>Access Expired</option>
+                    <option>Address</option>
+                    <option>Gender</option>
                   </select>
                   <span class="custom-arrow"></span>
                 </div>
+                <span>Selected actions: </span>
+                <a href="#" class="btn-fd-outline btn--small">Delete Data</a>
+                <a href="#" class="btn-fd-outline btn--small">Download Data</a>
               </div>
               <div class="right__box">
                 <form class="form__search">
@@ -267,69 +266,58 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Team</th>
+                    <th scope="col"><input class="custom-checkbox custom-checkbox--all" type="checkbox" name="checkall" id="checkall"></th>
                     <th scope="col">
-                      Name
+                      Fullname
                       <span class="sort__icon ascending active">
                         <i class="bi bi-sort-down"></i>
                       </span>
                     </th>
-                    <th scope="col">Project</th>
-                    <th scope="col">Access Expired</th>
-                    <th scope="col">Role</th>
+                    <th scope="col">NIK</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">NPWP</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Gender</th>
                     <th scope="col">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Developer</td>
-                    <td>
-                      <span class="main-item">Bambang</span>
-                      <span class="sub-item">#11222</span>
-                    </td>
-                    <td>1</td>
-                    <td>20/12/2023</td>
-                    <td>
-                      <div class="custom__select custom__select--outline">
-                        <select>
-                          <option>Administrator</option>
-                        </select>
-                        <span class="custom-arrow"></span>
-                      </div>
-                    </td>
+                    <td><input class="custom-checkbox"  type="checkbox" name="check"></td>
+                    <td>Bambang Gunawan</td>
+                    <td>32160620000000</td>
+                    <td>bambang@gmail.com</td>
+                    <td>+6282123456789</td>
+                    <td>112233445566-444</td>
+                    <td>Jl. Melati Gang V No.25</td>
+                    <td>Laki-laki</td>
                     <td>
                       <div class="d-flex flex-nowrap">
                         <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#delete-alert">
                           <i class="bi bi-trash"></i>
                         </a>
-                        <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#add-new-access">
+                        <a href="/customer-form.html" class="btn-fd-icon-outline">
                           <i class="bi bi-pencil-square"></i>
                         </a>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>Designer</td>
-                    <td>
-                      <span class="main-item">Eko</span>
-                      <span class="sub-item">#1113</span>
-                    </td>
-                    <td>2</td>
-                    <td>01/12/2023</td>
-                    <td>
-                      <div class="custom__select custom__select--outline">
-                        <select>
-                          <option>Staff</option>
-                        </select>
-                        <span class="custom-arrow"></span>
-                      </div>
-                    </td>
+                    <td><input class="custom-checkbox"  type="checkbox" name="check"></td>
+                    <td>Client Y</td>
+                    <td>32160620000001</td>
+                    <td>client@gmail.com</td>
+                    <td>+62821876543219</td>
+                    <td>112233445566-444</td>
+                    <td>Jl. Melati Gang V No.25</td>
+                    <td>Perempuan</td>
                     <td>
                       <div class="d-flex flex-nowrap">
                         <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#delete-alert">
                           <i class="bi bi-trash"></i>
                         </a>
-                        <a href="#" class="btn-fd-icon-outline" data-toggle="modal" data-target="#add-new-access">
+                        <a href="/customer-form.html" class="btn-fd-icon-outline">
                           <i class="bi bi-pencil-square"></i>
                         </a>
                       </div>
@@ -378,7 +366,7 @@
               <i class="bi bi-trash"></i>
             </div>
             <h1>Delete Data?</h1>
-            <p>Do you really want to delete this access control?</p>
+            <p>Do you really want to delete this customer?</p>
             <a href="#" class="btn btn-outline-danger" data-dismiss="modal">Cancel</a>
             <a href="#" class="btn btn-danger" data-dismiss="modal">Delete</a>
           </div>
@@ -397,78 +385,6 @@
             <h1>Done!</h1>
             <p>New access control was added</p>
             <a href="#" class="btn btn-fd-primary" data-dismiss="modal">OK</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal form-->
-    <div class="modal modal-form fade" id="add-new-access" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="add-new-accessLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Add New - Access Control</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true"><i class="bi bi-x-lg"></i></span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group row">
-                <label for="team" class="col-sm-4 col-form-label align-self-center">
-                  Team
-                  <span class="required">Required</span>
-                </label>
-                <div class="col-sm-8">
-                  <select id="team" class="form-control" required>
-                    <option selected>Developer</option>
-                    <option>Designer</option>
-                    <option>Sales</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="name" class="col-sm-4 col-form-label align-self-center">
-                  Name
-                  <span class="required">Required</span>
-                </label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control" id="name" placeholder="Name" required>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="access-expired" class="col-sm-4 col-form-label align-self-center">
-                  Access Expired
-                  <span class="required">Required</span>
-                </label>
-                <div class="col-sm-8">
-                  <div class="input-group date">
-                    <input type="text" class="form-control" id="access-expired" required><span class="input-group-addon"><i class="bi bi-calendar4"></i></span>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="role" class="col-sm-4 col-form-label align-self-center">
-                  Role
-                  <span class="required">Required</span>
-                </label>
-                <div class="col-sm-8">
-                  <select id="role" class="form-control" required>
-                    <option selected>Administrator</option>
-                    <option>Staff</option>
-                    <option>No Access</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row pt-4">
-                <div class="col-md-6 col-12">
-                  <button class="btn-fd-outline-secondary w-100" data-dismiss="modal">Cancel</button>
-                </div>
-                <div class="col-md-6 col-12">
-                  <button class="btn-fd-primary w-100" type="submit" data-dismiss="modal" data-toggle="modal" data-target="#success-alert">Save & Publish <i class="bi bi-send"></i></button>
-                </div>
-              </div>
-            </form>
           </div>
         </div>
       </div>
