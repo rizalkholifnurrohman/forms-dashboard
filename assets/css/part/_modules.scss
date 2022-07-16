@@ -272,9 +272,9 @@
 
   .bank{
     img{
-      max-width: 60px;
-      max-height: 36px;
-      object-fit: cover;
+      width: 60px;
+      height: 36px;
+      object-fit: fill;
       margin-right: .5rem;
       border-radius: 4px;
     }
@@ -298,6 +298,26 @@
 
     select{
       padding: 4px 12px 4px 4px;
+    }
+  }
+
+  .product-icon{
+    img{
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+      margin-right: 0.5rem;
+      border-radius: 4px;
+    }
+  }
+
+  .floor-plan{
+    img{
+      width: 80px;
+      height: 40px;
+      object-fit: cover;
+      margin-right: 0.5rem;
+      border-radius: 4px;
     }
   }
 }
@@ -391,6 +411,10 @@
      > *{
       margin-right: 8px;
      }
+
+     span{
+      white-space: nowrap;
+     }
   }
 
   .right__box{
@@ -406,6 +430,13 @@
 form{
   .col-form-label{
     font-weight: $FW_SEMI_BOLD;
+
+    p{
+      font-weight: $FW_LIGHT;
+      font-size: 12px;
+      margin: 0;
+      padding: .5rem 0 0;
+    }
   }
 
   .required{
@@ -491,4 +522,26 @@ form{
       margin-bottom: 2rem;
     }
   }
+}
+
+.cluster-details{
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+
+  h5{
+    margin-bottom: 1rem;
+  }
+}
+
+.property-details{
+  display: inline-block;
+  text-transform: capitalize;
+  padding: .5rem 1rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  white-space: nowrap;
+  @include transition(all .25s ease-out);
+  background: $fd_sc_brown-50;
+  color: $fd_sc_brown-400;
+  margin-right: 0.5rem;
 }

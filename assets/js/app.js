@@ -52,10 +52,10 @@
     });
 
     /* File input*/
-    $('#file-input').on('change', (e) => {
+    $('.file-upload').on('change', (e) => {
       let displayName = e.target.value.split("\\").pop().slice(0, 11);
       let extension = e.target.value.split('.').pop();
-      $('.custom-input-file .title')[0].textContent = displayName+'...'+extension;
+      $(e.target).closest('.custom-input-file').find('.title')[0].textContent = displayName+'...'+extension;
     });
 
   });

@@ -487,6 +487,7 @@ button.btn-fd-icon-outline{
   padding: .5rem 1rem;
   border-radius: 4px;
   text-align: center;
+  white-space: nowrap;
   @include transition(all .25s ease-out);
 
   i{
@@ -495,6 +496,10 @@ button.btn-fd-icon-outline{
 
   &.btn--small{
     padding: .3rem 1rem;
+  }
+
+  &.btn--large{
+    padding: 1.5rem 2rem;
   }
 }
 
@@ -716,6 +721,29 @@ button.btn-fd-arrow{
     color: $fd_sta_disabled;
     background: $fd_bg_grey;
     border: 1px solid $fd_bg_grey;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.btn-fd-outline-back{
+  padding: .2rem .5rem;
+  border: 2px solid $fd_pr_green;
+  color: $fd_pr_green;
+  border-radius: 8px;
+  font-size: 24px;
+  @include transition(all .25s ease-out);
+
+  &:not(.disabled):hover, &:not(.disabled).active, &:not(.disabled):active{
+    color: $fd_bs_white;
+    background: $fd_pr_green;
+    border: 2px solid $fd_pr_green;
+  }
+
+  &.disabled {
+    color: $fd_sta_disabled;
+    background: $fd_bg_grey;
+    border: 2px solid $fd_bg_grey;
     cursor: default;
     pointer-events: none;
   }
