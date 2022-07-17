@@ -94,12 +94,27 @@
   }
 
   @include viewport(desktop-down) {
-    width: 260px;
+    width: 240px;
 
     &.sidebar--collapsed{
       &:hover{
-        width: 260px;
+        width: 240px;
 
+        .sidebar__brand{
+          span{
+            opacity: 1;
+          }
+        }
+
+      }
+
+      .sidebar__brand{
+        justify-content: flex-start;
+        padding: 0 3rem 0 1.2rem;
+
+        span{
+          opacity: 0;
+        }
       }
     }
   }
@@ -124,6 +139,19 @@
       padding-left: 1rem;
       font-size: 36px;
       font-weight: $FW_EXTRA_LIGHT;
+    }
+  }
+
+  @include viewport(desktop-down) {
+    .sidebar__brand{
+  
+      img{
+        width: 40px;
+      }
+  
+      span{
+        font-size: 30px;
+      }
     }
   }
 }
@@ -297,6 +325,16 @@
       height: 80px;
     }
   }
+
+  @include viewport(desktop-down) {
+    .nav__item{
+      > .nav__link{
+        span{
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 .main-content{
@@ -305,11 +343,10 @@
   position: relative;
   width: calc(100% - 300px);
   @include transition(all .5s ease-out);
-  overflow-x: hidden;
 
   @include viewport(desktop-down) {
-    margin-left: 260px;
-    width: calc(100% - 260px);
+    margin-left: 240px;
+    width: calc(100% - 240px);
   }
 }
 
@@ -429,7 +466,7 @@
   }
 
   @include viewport(desktop-down) {
-    width: calc(100% - 260px - 2rem);
+    width: calc(100% - 240px - 2rem);
   }
 }
 
@@ -981,7 +1018,6 @@ input[type="checkbox"]{
 // Custom select 
 .custom__select {
   position: relative;
-  max-width: 190px;
   max-height: 40px;
 
   select {
