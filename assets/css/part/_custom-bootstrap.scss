@@ -282,4 +282,9 @@ button {
 
 .form-control{
   border-radius: 0.5rem;
+
+  &:focus{
+    box-shadow: 0 0 0 0.15rem rgba(138, 204, 161, .25);
+    border-color: $fd_pr_green;
+  }
 }

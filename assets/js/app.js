@@ -58,5 +58,66 @@
       $(e.target).closest('.custom-input-file').find('.title')[0].textContent = displayName+'...'+extension;
     });
 
+    /* File input 2 */
+    $('.input-page__img-file').on('change', (e) => {
+      let file = e.target.files[0];
+
+      let displayName = e.target.value.split("\\").pop().slice(0, 16);
+      let extension = e.target.value.split('.').pop();
+      let defaultImage = $(e.target).closest('.input-page__file-upload').find('.default-img')[0];
+      let previewImage = $(e.target).closest('.input-page__file-upload').find('.input-page__img-preview')[0];
+      let titleImage = $(e.target).closest('.input-page__file-upload').find('.title')[0];
+      let sizeImmage = $(e.target).closest('.input-page__file-upload');
+
+      if(file){
+        const reader = new FileReader();
+        let fileSize = Math.round(file.size / 1024);
+
+        reader.addEventListener('load', function() {
+          previewImage.setAttribute('src', this.result);
+        });
+
+        reader.readAsDataURL(file);
+        defaultImage.style.display = 'none';
+        previewImage.style.display = 'block';
+        titleImage.textContent = displayName+'... .'+extension;
+        sizeImmage.find('.size')[0].textContent = fileSize+' kB';
+
+      } else{
+        defaultImage.style.display = null;
+        previewImage.style.display = null;
+        previewImage.setAttribute('src', '');
+        titleImage.textContent = 'No file choosen';
+        sizeImmage.find('.size')[0].textContent = '0 kB';
+      }
+    })
+
+    $('.sliders').slick({
+      arrows: true,
+      prevArrow:"<button type='button' class='slick-arrow btn-fd-arrow slick-arrow--prev'><i class='bi bi-chevron-left'></i></button>",
+      nextArrow:"<button type='button' class='slick-arrow btn-fd-arrow slick-arrow--next'><i class='bi bi-chevron-right'></i></button>"
+    });
+    $('.facilities__items').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+    $('.testimoni-items').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      cssEase: 'linear'
+    });
+    $('.locations__items').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+  });
+
   });
 }(window, jQuery));
