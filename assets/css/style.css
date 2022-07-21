@@ -1593,6 +1593,17 @@ form .required {
   }
 }
 
+.footer__link {
+  color: #8ACCA1;
+  font-weight: 600;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.footer__link:hover {
+  color: #58B97D;
+}
+
 * {
   font-family: 'Poppins', sans-serif;
 }

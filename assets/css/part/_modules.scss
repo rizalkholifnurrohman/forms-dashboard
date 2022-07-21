@@ -1421,3 +1421,13 @@ form{
     }
   }
 }
+
+.footer__link{
+  color: $fd_pr_green;
+  font-weight: $FW_SEMI_BOLD;
+  @include transition(all .25s linear);
+
+  &:hover{
+    color: $fd_pr_green-300;
+  }
+}
